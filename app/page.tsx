@@ -1,6 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useSession } from "next-auth/react"
+import { useRouter } from "next/navigation"
+import { useEffect, useState } from "react"
 import { PortalSidebar } from "@/components/portal-sidebar"
 import { EmployerSidebar } from "@/components/employer-sidebar"
 import { PortalHeader } from "@/components/portal-header"
@@ -18,11 +20,47 @@ import { BalanceRadar } from "@/components/balance-radar"
 import { ResumeGenerator } from "@/components/resume-generator"
 import { cn } from "@/lib/utils"
 import { currentStudent } from "@/data"
+import { Loader2 } from "lucide-react"
 
 export default function Home() {
+  const { data: session, status } = useSession()
+  const router = useRouter()
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [mode, setMode] = useState<"student" | "employer">("student")
   const [activePage, setActivePage] = useState("dashboard")
+
+  // Redirect unauthenticated users to login
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.push("/login")
+    }
+  }, [status, router])
+
+  // Redirect authenticated users to their role dashboard
+  useEffect(() => {
+    if (status === "authenticated" && session?.user?.role) {
+      const roleRedirectMap: Record<string, string> = {
+        STUDENT: "/student",
+        EMPLOYER: "/employer",
+        TEACHER: "/teacher",
+      }
+      const target = roleRedirectMap[session.user.role]
+      if (target) {
+        router.push(target)
+      }
+    }
+  }, [status, session, router])
+
+  if (status === "loading") {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    )
+  }
+
+  // Show the original dashboard UI while redirecting or if no session
+  // This preserves the existing UI for the brief moment before redirect
 
   // Apply dark class to <html> when employer mode is active
   useEffect(() => {
