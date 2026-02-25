@@ -1,0 +1,526 @@
+{
+  "currentStudent": {
+    "id": "s-001",
+    "firstName": "Aidar",
+    "lastName": "Kasymov",
+    "avatar": "AK",
+    "email": "a.kasymov@enu.kz",
+    "university": "L.N. Gumilyov Eurasian National University",
+    "universityShort": "ENU",
+    "faculty": "Faculty of Information Technologies",
+    "facultyShort": "IT",
+    "specialty": "Software Engineering",
+    "year": 3,
+    "enrollmentYear": 2023,
+    "location": "Astana",
+    "gpa": 3.67,
+    "maxGpa": 4.0,
+    "semester": "Spring 2025-2026",
+    "gpaChange": 0.12,
+    "credits": { "earned": 128, "total": 240 },
+    "deansListStatus": true,
+    "availableForInternship": true,
+    "bio": "Passionate about backend development and data engineering. Active contributor to open-source projects and competitive programming enthusiast."
+  },
+
+  "skills": [
+    {
+      "skill": "Teamwork",
+      "hard": 60,
+      "soft": 92,
+      "category": "soft",
+      "verifications": [
+        {
+          "verifier": "Nurlan T. Akhmetov",
+          "role": "Professor, Project Management",
+          "date": "12 Jan 2026",
+          "context": "Курс 'Управление проектами' - продемонстрировал исключительные навыки командной работы и делегирования задач в групповом капстоун-проекте"
+        },
+        {
+          "verifier": "Aizhan B. Serikova",
+          "role": "Lecturer, Software Engineering",
+          "date": "15 Nov 2025",
+          "context": "Agile-проект по курсу 'Программная инженерия' - вел daily stand-up'ы и ретроспективы спринтов"
+        }
+      ]
+    },
+    {
+      "skill": "Algorithms",
+      "hard": 88,
+      "soft": 45,
+      "category": "hard",
+      "verifications": [
+        {
+          "verifier": "Daulet K. Ospanov",
+          "role": "Assoc. Professor, CS Dept.",
+          "date": "20 Dec 2025",
+          "context": "Курс 'Алгоритмы' подтвержден профессором Оспановым - оценка A+, отличные результаты по теории графов и динамическому программированию"
+        }
+      ]
+    },
+    {
+      "skill": "Communication",
+      "hard": 35,
+      "soft": 85,
+      "category": "soft",
+      "verifications": [
+        {
+          "verifier": "Gulnara M. Iskakova",
+          "role": "Senior Lecturer, Rhetoric",
+          "date": "03 Oct 2025",
+          "context": "Мастер-класс по публичным выступлениям - четкая структура, уверенная подача на казахском и английском языках"
+        },
+        {
+          "verifier": "Nurlan T. Akhmetov",
+          "role": "Professor, Project Management",
+          "date": "12 Jan 2026",
+          "context": "Капстоун-проект - отличные презентации перед стейкхолдерами и качественная документация"
+        }
+      ]
+    },
+    {
+      "skill": "System Design",
+      "hard": 78,
+      "soft": 50,
+      "category": "hard",
+      "verifications": [
+        {
+          "verifier": "Aizhan B. Serikova",
+          "role": "Lecturer, Software Engineering",
+          "date": "28 Nov 2025",
+          "context": "Спроектировал масштабируемую микросервисную архитектуру для семестрового проекта по курсу 'Проектирование ПО'"
+        }
+      ]
+    },
+    {
+      "skill": "Leadership",
+      "hard": 30,
+      "soft": 80,
+      "category": "soft",
+      "verifications": [
+        {
+          "verifier": "Nurlan T. Akhmetov",
+          "role": "Professor, Project Management",
+          "date": "12 Jan 2026",
+          "context": "Тимлид в капстоун-проекте из 6 человек - управлял сроками, распределением задач и мотивацией команды"
+        }
+      ]
+    },
+    {
+      "skill": "Databases",
+      "hard": 82,
+      "soft": 40,
+      "category": "hard",
+      "verifications": [
+        {
+          "verifier": "Marat S. Zhumabekov",
+          "role": "Assoc. Professor, Data Systems",
+          "date": "18 Sep 2025",
+          "context": "Курс 'Базы данных' - разработал оптимизированную схему PostgreSQL с продвинутой индексацией и партиционированием"
+        },
+        {
+          "verifier": "Daulet K. Ospanov",
+          "role": "Assoc. Professor, CS Dept.",
+          "date": "05 Jan 2026",
+          "context": "Работа научным ассистентом - спроектировал ETL-пайплайн для аналитической базы данных кафедры"
+        }
+      ]
+    },
+    {
+      "skill": "Problem Solving",
+      "hard": 90,
+      "soft": 70,
+      "category": "both",
+      "verifications": [
+        {
+          "verifier": "Daulet K. Ospanov",
+          "role": "Assoc. Professor, CS Dept.",
+          "date": "20 Dec 2025",
+          "context": "Результаты олимпиадного программирования - топ-5% на университетской олимпиаде ENU 2025"
+        },
+        {
+          "verifier": "Aizhan B. Serikova",
+          "role": "Lecturer, Software Engineering",
+          "date": "15 Nov 2025",
+          "context": "Хакатон ENU 2025 - придумал креативное решение в условиях ограниченного времени"
+        }
+      ]
+    },
+    {
+      "skill": "Presentation",
+      "hard": 25,
+      "soft": 75,
+      "category": "soft",
+      "verifications": [
+        {
+          "verifier": "Gulnara M. Iskakova",
+          "role": "Senior Lecturer, Rhetoric",
+          "date": "03 Oct 2025",
+          "context": "Финальная презентация по курсу 'Риторика' - 95/100 баллов, эффективное использование визуалов и сторителлинга"
+        }
+      ]
+    }
+  ],
+
+  "achievements": [
+    {
+      "id": 1,
+      "title": "Python Advanced",
+      "icon": "code",
+      "category": "skill",
+      "date": "15.01.2026",
+      "verified": true,
+      "description": "Сертификат Python продвинутого уровня подтвержден кафедрой Computer Science",
+      "verifier": {
+        "name": "Zh.T. Akhmetov",
+        "title": "Associate Professor",
+        "department": "Dept. of Computer Science"
+      }
+    },
+    {
+      "id": 2,
+      "title": "GPA 4.0 Distinction",
+      "icon": "star",
+      "category": "academic",
+      "date": "20.12.2025",
+      "verified": true,
+      "description": "Знак отличия за GPA 4.0 - попадание в Dean's List по итогам осеннего семестра 2025",
+      "verifier": {
+        "name": "S.K. Nurmagambetova",
+        "title": "Dean",
+        "department": "Faculty of IT"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Machine Learning",
+      "icon": "brain",
+      "category": "skill",
+      "date": "10.11.2025",
+      "verified": true,
+      "description": "Курс 'Machine Learning' пройден с оценкой A - подтверждено профессором Тулегеновым",
+      "verifier": {
+        "name": "B.A. Tulegenov",
+        "title": "Professor",
+        "department": "Dept. of AI & Data Science"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Hackathon Astana Hub",
+      "icon": "trophy",
+      "category": "competition",
+      "date": "05.11.2025",
+      "verified": true,
+      "description": "Сертификат хакатона Astana Hub добавлен в портфолио - 1-е место в треке EdTech",
+      "verifier": {
+        "name": "A.M. Kairbekova",
+        "title": "Director",
+        "department": "ENU Innovation Lab"
+      }
+    },
+    {
+      "id": 5,
+      "title": "AWS Cloud Practitioner",
+      "icon": "shield",
+      "category": "certification",
+      "date": "18.09.2025",
+      "verified": true,
+      "description": "Международный сертификат AWS Cloud Practitioner верифицирован университетом",
+      "verifier": {
+        "name": "R.E. Sadykov",
+        "title": "Senior Lecturer",
+        "department": "Dept. of Information Systems"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Research Publication",
+      "icon": "file",
+      "category": "academic",
+      "date": "01.09.2025",
+      "verified": true,
+      "description": "Научная публикация 'NLP for Kazakh Language' принята на конференцию IEEE - подтверждено научным руководителем",
+      "verifier": {
+        "name": "Zh.T. Akhmetov",
+        "title": "Associate Professor",
+        "department": "Dept. of Computer Science"
+      }
+    },
+    {
+      "id": 7,
+      "title": "System Design",
+      "icon": "cpu",
+      "category": "skill",
+      "date": "15.06.2025",
+      "verified": true,
+      "description": "Навык 'Проектирование систем' верифицирован по итогам проектного курса - проектирование микросервисной архитектуры",
+      "verifier": {
+        "name": "D.N. Omarov",
+        "title": "Lecturer",
+        "department": "Dept. of Software Engineering"
+      }
+    },
+    {
+      "id": 8,
+      "title": "UX/UI Design",
+      "icon": "palette",
+      "category": "skill",
+      "date": "20.05.2025",
+      "verified": false,
+      "description": "Сертификат по UX/UI Design - ожидает подтверждения от кафедры дизайна",
+      "verifier": {
+        "name": "L.V. Kim",
+        "title": "Senior Lecturer",
+        "department": "Dept. of Design & Media"
+      }
+    }
+  ],
+
+  "recommendations": [
+    {
+      "id": 1,
+      "professorName": "Prof. Nurlan Beketov",
+      "initials": "NB",
+      "department": "Department of Computer Science",
+      "text": "Aidar продемонстрировал исключительное аналитическое мышление и лидерство в ходе капстоун-проекта по Software Engineering. Его способность декомпозировать сложные задачи и менторить тиммейтов выделяет его среди студентов потока.",
+      "date": "Feb 2026",
+      "course": "Software Engineering",
+      "verified": true
+    },
+    {
+      "id": 2,
+      "professorName": "Prof. Aizhan Suleimenova",
+      "initials": "AS",
+      "department": "Department of Data Science",
+      "text": "Один из самых целеустремленных студентов, которых я курировала. Исследование Aidar по применению ML в образовании было принято на конференцию IEEE - редкое достижение для бакалавра. Рекомендую для позиций Data Science и Research.",
+      "date": "Dec 2025",
+      "course": "Machine Learning",
+      "verified": true
+    },
+    {
+      "id": 3,
+      "professorName": "Prof. Daulet Kairatov",
+      "initials": "DK",
+      "department": "Department of Mathematics",
+      "text": "Сильная математическая база и креативный подход к проектированию алгоритмов. Aidar стабильно входит в топ-5% потока и активно участвует в олимпиадном программировании. Курс 'Алгоритмы' подтвержден с оценкой A+.",
+      "date": "Oct 2025",
+      "course": "Algorithms & Data Structures",
+      "verified": true
+    }
+  ],
+
+  "activityLog": [
+    {
+      "id": 1,
+      "type": "skill_verified",
+      "title": "Курс 'Алгоритмы' подтвержден профессором Оспановым",
+      "description": "Daulet K. Ospanov верифицировал навык 'Algorithms' с оценкой 88/100",
+      "date": "20.12.2025",
+      "icon": "check"
+    },
+    {
+      "id": 2,
+      "type": "achievement_added",
+      "title": "Сертификат хакатона Astana Hub добавлен в портфолио",
+      "description": "1-е место в треке EdTech - подтверждено директором ENU Innovation Lab",
+      "date": "05.11.2025",
+      "icon": "trophy"
+    },
+    {
+      "id": 3,
+      "type": "recommendation_received",
+      "title": "Новая рекомендация от Prof. Nurlan Beketov",
+      "description": "Рекомендательное письмо по итогам курса Software Engineering добавлено в профиль",
+      "date": "15.02.2026",
+      "icon": "message"
+    },
+    {
+      "id": 4,
+      "type": "achievement_added",
+      "title": "Научная публикация IEEE добавлена в достижения",
+      "description": "Статья 'NLP for Kazakh Language' верифицирована научным руководителем Zh.T. Akhmetov",
+      "date": "01.09.2025",
+      "icon": "file"
+    },
+    {
+      "id": 5,
+      "type": "skill_verified",
+      "title": "Навык 'Databases' подтвержден проф. Жумабековым",
+      "description": "Marat S. Zhumabekov верифицировал после курса 'Базы данных' - оптимизированная PostgreSQL-схема",
+      "date": "18.09.2025",
+      "icon": "check"
+    },
+    {
+      "id": 6,
+      "type": "certification_added",
+      "title": "AWS Cloud Practitioner сертификат загружен",
+      "description": "Международный сертификат верифицирован преподавателем R.E. Sadykov из кафедры информационных систем",
+      "date": "18.09.2025",
+      "icon": "shield"
+    },
+    {
+      "id": 7,
+      "type": "skill_verified",
+      "title": "Курс 'System Design' подтвержден преподавателем Серіковой",
+      "description": "Aizhan B. Serikova верифицировала навык после проектирования микросервисной архитектуры",
+      "date": "28.11.2025",
+      "icon": "check"
+    },
+    {
+      "id": 8,
+      "type": "achievement_added",
+      "title": "Знак отличия GPA 4.0 присвоен деканатом",
+      "description": "Декан S.K. Nurmagambetova подтвердила попадание в Dean's List по итогам семестра",
+      "date": "20.12.2025",
+      "icon": "star"
+    }
+  ],
+
+  "talentPool": [
+    {
+      "id": 1,
+      "name": "Aidar Kasymov",
+      "avatar": "AK",
+      "university": "ENU",
+      "faculty": "IT",
+      "year": 3,
+      "gpa": 3.67,
+      "percentile": 4,
+      "availableForInternship": true,
+      "location": "Astana",
+      "skills": [
+        { "name": "Python", "level": "expert" },
+        { "name": "React", "level": "advanced" },
+        { "name": "PostgreSQL", "level": "advanced" },
+        { "name": "Docker", "level": "intermediate" },
+        { "name": "Machine Learning", "level": "intermediate" }
+      ],
+      "achievements": 5,
+      "recommendations": 3,
+      "matchScore": 94,
+      "bio": "Бэкенд-разработчик и энтузиаст data engineering. Активный контрибьютор open-source проектов.",
+      "tags": ["Top 5%", "Open to Internship"]
+    },
+    {
+      "id": 2,
+      "name": "Dana Nurzhanova",
+      "avatar": "DN",
+      "university": "ENU",
+      "faculty": "IT",
+      "year": 4,
+      "gpa": 3.89,
+      "percentile": 2,
+      "availableForInternship": true,
+      "location": "Astana",
+      "skills": [
+        { "name": "Java", "level": "expert" },
+        { "name": "Spring Boot", "level": "expert" },
+        { "name": "Kubernetes", "level": "advanced" },
+        { "name": "AWS", "level": "advanced" },
+        { "name": "System Design", "level": "intermediate" }
+      ],
+      "achievements": 8,
+      "recommendations": 5,
+      "matchScore": 91,
+      "bio": "Бэкенд-инженер, специализация на микросервисной архитектуре. Победитель университетского хакатона 2025.",
+      "tags": ["Top 5%", "Open to Internship", "Hackathon Winner"]
+    },
+    {
+      "id": 3,
+      "name": "Marat Abylkasymov",
+      "avatar": "MA",
+      "university": "ENU",
+      "faculty": "IT",
+      "year": 3,
+      "gpa": 3.45,
+      "percentile": 12,
+      "availableForInternship": false,
+      "location": "Almaty",
+      "skills": [
+        { "name": "JavaScript", "level": "expert" },
+        { "name": "TypeScript", "level": "advanced" },
+        { "name": "React", "level": "expert" },
+        { "name": "Next.js", "level": "advanced" },
+        { "name": "Figma", "level": "intermediate" }
+      ],
+      "achievements": 4,
+      "recommendations": 2,
+      "matchScore": 87,
+      "bio": "Full-stack разработчик с фокусом на фронтенд. Строит стартап для студенческой коллаборации.",
+      "tags": ["Founder"]
+    },
+    {
+      "id": 4,
+      "name": "Aisha Bektursynova",
+      "avatar": "AB",
+      "university": "ENU",
+      "faculty": "IT",
+      "year": 2,
+      "gpa": 3.92,
+      "percentile": 1,
+      "availableForInternship": true,
+      "location": "Astana",
+      "skills": [
+        { "name": "Python", "level": "expert" },
+        { "name": "TensorFlow", "level": "advanced" },
+        { "name": "NLP", "level": "advanced" },
+        { "name": "Data Analysis", "level": "expert" },
+        { "name": "Research", "level": "advanced" }
+      ],
+      "achievements": 6,
+      "recommendations": 4,
+      "matchScore": 96,
+      "bio": "AI/ML исследователь с публикацией по NLP для казахского языка. Стипендиатка Dean's List.",
+      "tags": ["Top 5%", "Open to Internship", "Published Author"]
+    },
+    {
+      "id": 5,
+      "name": "Timur Omarov",
+      "avatar": "TO",
+      "university": "ENU",
+      "faculty": "IT",
+      "year": 4,
+      "gpa": 3.55,
+      "percentile": 8,
+      "availableForInternship": true,
+      "location": "Astana",
+      "skills": [
+        { "name": "Go", "level": "advanced" },
+        { "name": "gRPC", "level": "advanced" },
+        { "name": "PostgreSQL", "level": "expert" },
+        { "name": "Redis", "level": "advanced" },
+        { "name": "CI/CD", "level": "intermediate" }
+      ],
+      "achievements": 3,
+      "recommendations": 2,
+      "matchScore": 82,
+      "bio": "Системный программист. Интересует высоконагруженный распределенный бэкенд и DevOps-культура.",
+      "tags": ["Open to Internship"]
+    },
+    {
+      "id": 6,
+      "name": "Zarina Karimova",
+      "avatar": "ZK",
+      "university": "ENU",
+      "faculty": "IT",
+      "year": 3,
+      "gpa": 3.78,
+      "percentile": 3,
+      "availableForInternship": false,
+      "location": "Shymkent",
+      "skills": [
+        { "name": "Swift", "level": "expert" },
+        { "name": "Kotlin", "level": "advanced" },
+        { "name": "Flutter", "level": "advanced" },
+        { "name": "Firebase", "level": "advanced" },
+        { "name": "UI/UX", "level": "intermediate" }
+      ],
+      "achievements": 7,
+      "recommendations": 3,
+      "matchScore": 79,
+      "bio": "Мобильный разработчик с приложениями в App Store и Google Play. Увлекается UI/UX дизайном.",
+      "tags": ["Top 5%", "App Published"]
+    }
+  ]
+}
