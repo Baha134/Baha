@@ -7,7 +7,6 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
-  ResponsiveContainer,
   Legend,
 } from "recharts"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -46,41 +45,39 @@ export function SkillsRadar() {
             }}
             className="mx-auto aspect-square h-[220px]"
           >
-            <ResponsiveContainer width="100%" height="100%">
-              <RadarChart cx="50%" cy="50%" outerRadius="70%" data={skillsData}>
-                <PolarGrid stroke="#e2e8f0" />
-                <PolarAngleAxis
-                  dataKey="skill"
-                  tick={{ fill: "#64748b", fontSize: 10 }}
-                />
-                <PolarRadiusAxis
-                  angle={90}
-                  domain={[0, 100]}
-                  tick={false}
-                  axisLine={false}
-                />
-                <ChartTooltip content={<ChartTooltipContent />} />
-                <Radar
-                  name="Hard Skills"
-                  dataKey="hard"
-                  stroke={hardColor}
-                  fill={hardColor}
-                  fillOpacity={0.15}
-                  strokeWidth={2}
-                />
-                <Radar
-                  name="Soft Skills"
-                  dataKey="soft"
-                  stroke={softColor}
-                  fill={softColor}
-                  fillOpacity={0.15}
-                  strokeWidth={2}
-                />
-                <Legend
-                  wrapperStyle={{ fontSize: "11px", paddingTop: "4px" }}
-                />
-              </RadarChart>
-            </ResponsiveContainer>
+            <RadarChart cx="50%" cy="50%" outerRadius="70%" data={skillsData}>
+              <PolarGrid stroke="#e2e8f0" />
+              <PolarAngleAxis
+                dataKey="skill"
+                tick={{ fill: "#64748b", fontSize: 10 }}
+              />
+              <PolarRadiusAxis
+                angle={90}
+                domain={[0, 100]}
+                tick={false}
+                axisLine={false}
+              />
+              <ChartTooltip content={<ChartTooltipContent />} />
+              <Radar
+                name="Hard Skills"
+                dataKey="hard"
+                stroke={hardColor}
+                fill={hardColor}
+                fillOpacity={0.15}
+                strokeWidth={2}
+              />
+              <Radar
+                name="Soft Skills"
+                dataKey="soft"
+                stroke={softColor}
+                fill={softColor}
+                fillOpacity={0.15}
+                strokeWidth={2}
+              />
+              <Legend
+                wrapperStyle={{ fontSize: "11px", paddingTop: "4px" }}
+              />
+            </RadarChart>
           </ChartContainer>
 
           {/* Clickable skill list */}
