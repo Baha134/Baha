@@ -2,10 +2,12 @@
 
 import {
   Bell,
+  BookOpen,
   Building2,
   FileDown,
   GraduationCap,
   Globe,
+  LogOut,
   Menu,
   Search,
 } from "lucide-react"
@@ -23,16 +25,20 @@ import { cn } from "@/lib/utils"
 
 interface PortalHeaderProps {
   onToggleSidebar: () => void
-  mode: "student" | "employer"
-  onToggleMode: () => void
+  mode: "student" | "employer" | "teacher"
+  onSetMode: (mode: "student" | "employer" | "teacher") => void
   breadcrumb?: string
+  userIin?: string
+  onLogout?: () => void
 }
 
 export function PortalHeader({
   onToggleSidebar,
   mode,
-  onToggleMode,
+  onSetMode,
   breadcrumb,
+  userIin,
+  onLogout,
 }: PortalHeaderProps) {
   return (
     <header className="flex h-16 items-center justify-between border-b border-border bg-card px-5">
@@ -49,7 +55,7 @@ export function PortalHeader({
 
         <nav className="hidden items-center gap-1.5 text-sm md:flex">
           <span className="text-muted-foreground">
-            {mode === "student" ? "Student" : "Employer"}
+            {mode === "student" ? "Student" : mode === "employer" ? "Employer" : "Teacher"}
           </span>
           <span className="text-muted-foreground/50">/</span>
           <span className="font-semibold text-foreground">
@@ -62,9 +68,9 @@ export function PortalHeader({
         {/* Mode toggle */}
         <div className="hidden items-center rounded-xl bg-secondary p-0.5 sm:flex">
           <button
-            onClick={() => mode !== "student" && onToggleMode()}
+            onClick={() => onSetMode("student")}
             className={cn(
-              "flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition-all",
+              "flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all",
               mode === "student"
                 ? "bg-card text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground"
@@ -74,9 +80,9 @@ export function PortalHeader({
             Student
           </button>
           <button
-            onClick={() => mode !== "employer" && onToggleMode()}
+            onClick={() => onSetMode("employer")}
             className={cn(
-              "flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition-all",
+              "flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all",
               mode === "employer"
                 ? "bg-card text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground"
@@ -84,6 +90,18 @@ export function PortalHeader({
           >
             <Building2 className="h-3.5 w-3.5" />
             Employer
+          </button>
+          <button
+            onClick={() => onSetMode("teacher")}
+            className={cn(
+              "flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all",
+              mode === "teacher"
+                ? "bg-card text-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            )}
+          >
+            <BookOpen className="h-3.5 w-3.5" />
+            Teacher
           </button>
         </div>
 
@@ -113,6 +131,26 @@ export function PortalHeader({
         {mode === "employer" && (
           <Button className="hidden h-9 gap-2 rounded-xl bg-primary px-4 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md sm:flex">
             Post Vacancy
+          </Button>
+        )}
+
+        {/* User IIN display */}
+        {userIin && (
+          <span className="hidden text-xs text-muted-foreground md:block">
+            {userIin.slice(0, 6)}...
+          </span>
+        )}
+
+        {/* Logout */}
+        {onLogout && (
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-9 w-9 rounded-xl text-muted-foreground hover:text-foreground"
+            onClick={onLogout}
+          >
+            <LogOut className="h-4 w-4" />
+            <span className="sr-only">Logout</span>
           </Button>
         )}
 

@@ -1,8 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
+import { useAuth } from "@/components/auth-provider"
 import { PortalSidebar } from "@/components/portal-sidebar"
 import { EmployerSidebar } from "@/components/employer-sidebar"
+import { TeacherSidebar } from "@/components/teacher-sidebar"
 import { PortalHeader } from "@/components/portal-header"
 import { GpaWidget } from "@/components/gpa-widget"
 import { SkillsRadar } from "@/components/skills-radar"
@@ -16,13 +19,38 @@ import { EmployerStats } from "@/components/employer-stats"
 import { ActivityTimeline } from "@/components/activity-timeline"
 import { BalanceRadar } from "@/components/balance-radar"
 import { ResumeGenerator } from "@/components/resume-generator"
+import { TeacherDashboard } from "@/components/teacher-dashboard"
 import { cn } from "@/lib/utils"
 import { currentStudent } from "@/data"
+import { Loader2 } from "lucide-react"
 
 export default function Home() {
+  const { user, isLoading, logout } = useAuth()
+  const router = useRouter()
   const [sidebarOpen, setSidebarOpen] = useState(true)
-  const [mode, setMode] = useState<"student" | "employer">("student")
+  const [mode, setMode] = useState<"student" | "employer" | "teacher">("student")
   const [activePage, setActivePage] = useState("dashboard")
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!isLoading && !user) {
+      router.push("/login")
+    }
+  }, [isLoading, user, router])
+
+  // Set initial mode based on user role
+  useEffect(() => {
+    if (user) {
+      setMode(user.role)
+      if (user.role === "employer") {
+        setActivePage("talent-feed")
+      } else if (user.role === "teacher") {
+        setActivePage("teacher-dashboard")
+      } else {
+        setActivePage("dashboard")
+      }
+    }
+  }, [user])
 
   // Apply dark class to <html> when employer mode is active
   useEffect(() => {
@@ -37,14 +65,14 @@ export default function Home() {
     }
   }, [mode])
 
-  // Reset to talent feed when switching to employer, dashboard for student
-  const handleModeToggle = () => {
-    if (mode === "student") {
-      setMode("employer")
+  const handleSetMode = (newMode: "student" | "employer" | "teacher") => {
+    setMode(newMode)
+    if (newMode === "student") {
+      setActivePage("dashboard")
+    } else if (newMode === "employer") {
       setActivePage("talent-feed")
     } else {
-      setMode("student")
-      setActivePage("dashboard")
+      setActivePage("teacher-dashboard")
     }
   }
 
@@ -56,7 +84,21 @@ export default function Home() {
         ? "Resume Generator"
         : activePage === "talent-feed"
           ? "Talent Feed"
-          : activePage.charAt(0).toUpperCase() + activePage.slice(1)
+          : activePage === "teacher-dashboard"
+            ? "Оқытушы панелі"
+            : activePage.charAt(0).toUpperCase() + activePage.slice(1)
+
+  if (isLoading) {
+    return (
+      <div className="flex h-screen items-center justify-center bg-background">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    )
+  }
+
+  if (!user) {
+    return null
+  }
 
   return (
     <div className="flex h-screen overflow-hidden bg-background transition-colors duration-300">
@@ -78,8 +120,10 @@ export default function Home() {
               activePage={activePage}
               onNavigate={setActivePage}
             />
-          ) : (
+          ) : mode === "employer" ? (
             <EmployerSidebar />
+          ) : (
+            <TeacherSidebar onLogout={logout} />
           )}
         </div>
       </div>
@@ -89,8 +133,10 @@ export default function Home() {
         <PortalHeader
           onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
           mode={mode}
-          onToggleMode={handleModeToggle}
+          onSetMode={handleSetMode}
           breadcrumb={pageName}
+          userIin={user.iin}
+          onLogout={logout}
         />
 
         <main className="flex-1 overflow-y-auto">
@@ -101,8 +147,10 @@ export default function Home() {
               ) : (
                 <StudentDashboard />
               )
-            ) : (
+            ) : mode === "employer" ? (
               <EmployerDashboard />
+            ) : (
+              <TeacherDashboard />
             )}
           </div>
         </main>
