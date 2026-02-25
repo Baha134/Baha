@@ -7,7 +7,6 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
-  ResponsiveContainer,
 } from "recharts"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -214,7 +213,6 @@ export function BalanceRadar() {
 
         {/* Radar Chart */}
         <ChartContainer config={chartConfig} className="mx-auto h-[280px]">
-          <ResponsiveContainer width="100%" height="100%">
             <RadarChart
               cx="50%"
               cy="50%"
@@ -293,7 +291,6 @@ export function BalanceRadar() {
                 }}
               />
             </RadarChart>
-          </ResponsiveContainer>
         </ChartContainer>
 
         {/* Active dimension detail panel */}
